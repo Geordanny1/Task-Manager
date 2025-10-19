@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 class Task:
     def __init__(self, title, description, date, id, status = "Not Completed"):
         self.title = title
@@ -24,8 +27,14 @@ class Task:
     def completed(self):
         self.status = "COMPLETED"
 
-    def get_table(self):
-        return [self.get_title(), self.get_description(), self.get_date(), self.get_status(), self.get_id()]
+    def get_df(self):
+        return pd.DataFrame({
+            "TITLE" : [self.get_title()],
+            "DESCRIPTION" : [self.get_description()], 
+            "DATE" : [self.get_date()], 
+            "STATUS" : [self.get_status()], 
+            "ID" : [self.get_id()]
+        })
 
     def __str__(self):
         return f"[TITLE]\n{self.title}\n[DESCRIPTION]\n{self.description}\n[DATE]\n{self.date}\n[STATUS]\n{self.status}"
