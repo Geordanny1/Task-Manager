@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Task_File
+task_list.pkl
+
 # Distribution / packaging
 .Python
 build/
