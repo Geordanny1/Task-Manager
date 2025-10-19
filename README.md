@@ -1,6 +1,5 @@
 # Task-Manager--CLI
 
-Task Manager CLI
-A simple and efficient command-line application to manage your daily tasks. Organize, update, and mark tasks quickly and easily directly from your terminal.
+Task Manager
+A simple and efficient command-line application to manage tasks, It allows you to create, update and remove task as well see the task, in a table format.
 
-following the: https://roadmap.sh/projects/task-tracker
