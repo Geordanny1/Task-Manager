@@ -27,6 +27,10 @@ def update_task(task_id, new_title=None, new_description=None, new_status=None):
     
     df = get_task_list()
     
+    if df.empty:
+        print("\nNo tasks found in the system.")
+        return False
+    
     # Find the task by ID
     task_mask = df['ID'] == task_id
     
@@ -44,6 +48,8 @@ def update_task(task_id, new_title=None, new_description=None, new_status=None):
     if new_status:
         df.loc[task_mask, 'STATUS'] = new_status
     
+    # Reset index before saving to avoid issues
+    df = df.reset_index(drop=True)
     df.to_pickle(TASK_FILE)
     return True
 
