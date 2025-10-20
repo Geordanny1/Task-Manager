@@ -75,12 +75,6 @@ python3 main.py clear --confirm
 
 This deletes ALL tasks. The `--confirm` flag is there to make sure you don't accidentally nuke everything.
 
-## Pro tips
-
-- When you create a task, copy the ID that gets printed out. You'll need it for updates and deletes.
-- Use `list` frequently to see your task IDs and what you've got going on.
-- If you forget an ID, just try the command with a fake ID and it'll show you all available tasks.
-
 ## Files structure
 
 - `main.py` - The main program that handles all the commands
